@@ -8,3 +8,7 @@ $ apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 1DB8ADC1CFCA9579
 $ apt-get update
 $ apt-get install ffmpeg
 ```
+
+##Authors:
+
+Israel Calvete Talavera <icalvete@gmail.com>
