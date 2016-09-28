@@ -1,9 +1,5 @@
 class ubuntu_ffmpeg::install {
 
-  package { 'software-properties-common':
-    ensure  => present
-  }
-
   exec { 'adding_ppa_ffmpeg_repo':
     command  => "add-apt-repository -y ppa:mc3man/trusty-media",
     user     => 'root',
