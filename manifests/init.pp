@@ -1,4 +1,8 @@
-class ubuntu_ffmpeg () inherits ubuntu_ffmpeg::params {
+class ubuntu_ffmpeg (
+
+  $ppa = $ubuntu_ffmpeg::params::ppa
+
+) inherits ubuntu_ffmpeg::params {
 
   anchor {'ubuntu_ffmpeg::begin':
     before => Class['ubuntu_ffmpeg::install']

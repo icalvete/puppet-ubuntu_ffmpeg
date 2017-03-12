@@ -1,23 +1,10 @@
 class ubuntu_ffmpeg::install {
+  include apt
 
-  exec { 'adding_ppa_ffmpeg_repo':
-    command  => "add-apt-repository -y ppa:mc3man/trusty-media",
-    user     => 'root',
-    provider => 'shell',
-    notify   => Exec['updating_list_from_ppa_ffmpeg_repo'],
-    require  => Package['software-properties-common'],
-    unless   => '/bin/grep mc3man /etc/apt/sources.list'
-  }
-
-  exec { 'updating_list_from_ppa_ffmpeg_repo':
-    command     => 'apt-get update',
-    user        => 'root',
-    provider    => 'shell',
-    refreshonly => true
-  }
+  apt::ppa { $ubuntu_ffmpeg::ppa: }
 
   package { 'ffmpeg':
     ensure  => present,
-    require => Exec['adding_ppa_ffmpeg_repo', 'updating_list_from_ppa_ffmpeg_repo']
+    require => Class['apt::update']
   }
 }
