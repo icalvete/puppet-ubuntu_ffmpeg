@@ -2,6 +2,8 @@
 
 Puppet manifest to install deprecated ffmpeg in ubuntu 14.04  (Trusty Tahr)
 
+[![Build Status](https://secure.travis-ci.org/icalvete/puppet-ubuntu_ffmpeg.png)](http://travis-ci.org/icalvete/puppet-ubuntu_ffmpeg)
+
 ## Instructions for manual instalation
 
 ```bash
