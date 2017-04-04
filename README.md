@@ -26,6 +26,6 @@ node defaults {
 }
 ```
 
-##Authors:
+## Authors:
 
 Israel Calvete Talavera <icalvete@gmail.com>
