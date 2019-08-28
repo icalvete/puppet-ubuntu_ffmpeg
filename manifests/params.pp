@@ -10,6 +10,9 @@ class ubuntu_ffmpeg::params {
           #$ppa = 'ppa:mc3man/ffmpeg-test'
           $ppa = 'ppa:jonathonf/ffmpeg-3'
         }
+        'bionic': {
+          $ppa = undef
+        }
         default: {
           fail ("${::lsbdistcodename} not supported.")
         }
