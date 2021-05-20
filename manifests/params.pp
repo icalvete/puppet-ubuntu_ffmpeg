@@ -13,6 +13,9 @@ class ubuntu_ffmpeg::params {
         'bionic': {
           $ppa = undef
         }
+        'focal': {
+          $ppa = undef
+        }
         default: {
           fail ("${::lsbdistcodename} not supported.")
         }
