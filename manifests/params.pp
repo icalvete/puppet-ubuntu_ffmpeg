@@ -16,6 +16,9 @@ class ubuntu_ffmpeg::params {
         'focal': {
           $ppa = undef
         }
+        'jammy': {
+          $ppa = undef
+        }
         default: {
           fail ("${::lsbdistcodename} not supported.")
         }
