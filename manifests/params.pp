@@ -19,6 +19,9 @@ class ubuntu_ffmpeg::params {
         'jammy': {
           $ppa = undef
         }
+        'noble': {
+          $ppa = undef
+        }
         default: {
           fail ("${::lsbdistcodename} not supported.")
         }
