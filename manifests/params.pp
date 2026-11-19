@@ -22,6 +22,9 @@ class ubuntu_ffmpeg::params {
         'noble': {
           $ppa = undef
         }
+        'resolute': {
+          $ppa = undef
+        }
         default: {
           fail ("${::lsbdistcodename} not supported.")
         }
